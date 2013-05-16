@@ -12,12 +12,10 @@ public class FeedThemAll {
 	 */
 	public static void main(String[] args) {
 		
-		
-		Laboratory lab = new Laboratory();
-		
 		IceCreamFactory factory = new IceCreamFactory();
 		
 		UnlimitedStore store = new UnlimitedStore();
+					   store.loadFood(factory.produceAllKnownIceCream());
 		
 		RandomKindergarten kdg = new RandomKindergarten(10l);	
 						   kdg.purshaseSomeFood(store, IceCream.class);

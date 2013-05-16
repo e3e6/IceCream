@@ -8,10 +8,33 @@ import java.util.Iterator;
 import com.creamtec.icecream.general.Action;
 import com.creamtec.icecream.general.Item;
 
+/**
+ * Class represents a person
+ * @author alex
+ *
+ */
 public abstract class Person {
 	protected String name;
-	protected HashSet<Action> knownActions;
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	protected HashSet<Action> knownActions = new HashSet<Action>();
 	
+	
+	/**
+	 * Default constructor
+	 * @param name
+	 */
+	public Person(String name) {
+		super();
+		this.name = name;
+	}
+
 	public void offer(Item someItem){
 		doRandomAction(someItem);
 	}
